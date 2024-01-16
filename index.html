@@ -1,0 +1,87 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Luas dan Keliling</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <div class="header-container">
+        <h1 class="custom-header">KalTik</h1>
+        <h2 class="sub-header">Kalkulator Matematika</h2>
+    </div>
+</head>
+<p class="body-header">Welcome to Kaltik</p>
+<body>
+    <p>Hy guys, selamat datang di Mini Project Kaltik<br>
+        Ini merupakan project pertama saya dalam menggunakan HTML, semoga tidak jelek2 amat<br>
+        Thank you REVOU<br>
+        by d'electrofied
+    </p>
+    <label for="jenisBangun">Pilih jenis bangun:</label>
+    <select id="jenisBangun" onchange="tampilkanInput()">
+        <option value="" disabled selected>Silahkan pilih jenis bangun</option>
+        <option value="persegi">Persegi</option>
+        <option value="persegiPanjang">Persegi Panjang</option>
+    </select>
+
+    <br>
+
+    <div id="inputPanjangLebar" class="inputPanjangLebar">
+
+        <div class="shape rectangle" id="rectangle" style="width: 120px; height: 80px;">
+            <div class="corner" style="top: 0; left: 0;">A</div>
+            <div class="corner" style="top: 0; right: 0;">B</div>
+            <div class="corner" style="bottom: 0; left: 0;">D</div>
+            <div class="corner" style="bottom: 0; right: 0;">C</div>
+            <div class="line line-A-B"></div>
+            <div class="line line-B-C"></div>
+            <div class="line line-C-D"></div>
+            <div class="line line-D-A"></div>
+            <div class="side length" style="top: 0; left: 0;"></div>
+            <div class="side length" style="top: 0; right: 0;"></div>
+            <div class="side width" style="bottom: 0; left: 0;"></div>
+            <div class="side width" style="bottom: 0; right: 0;"></div>
+        </div>
+        
+        <label for="panjang">Masukkan panjang:</label>
+        <input type="number" id="panjang" placeholder="Panjang" />
+
+        <br>
+
+        <label for="lebar">Masukkan lebar:</label>
+        <input type="number" id="lebar" placeholder="Lebar" />
+    </div>
+
+    <div id="inputSisi" class="inputSisi">
+
+        <div class="shape" id="square" style="width: 100px; height: 100px;">
+            <div class="corner" style="top: 0; left: 0;">A</div>
+            <div class="corner" style="top: 0; right: 0;">B</div>
+            <div class="corner" style="bottom: 0; left: 0;">D</div>
+            <div class="corner" style="bottom: 0; right: 0;">C</div>
+            <div class="line" style="top: 0; left: 0; height: 1px; width: 100%;"></div>
+            <div class="line" style="top: 0; right: 0; height: 1px; width: 100%;"></div>
+            <div class="line" style="bottom: 0; left: 0; width: 1px; height: 100%;"></div>
+            <div class="line" style="bottom: 0; right: 0; width: 1px; height: 100%;"></div>
+            <div class="side" style="top: 0; left: 0; height: 100%; width: 1px;"></div>
+            <div class="side" style="top: 0; right: 0; height: 100%; width: 1px;"></div>
+            <div class="side" style="bottom: 0; left: 0; width: 100%; height: 1px;"></div>
+            <div class="side" style="bottom: 0; right: 0; width: 100%; height: 1px;"></div>
+        </div>
+
+        <label for="sisi">Masukkan panjang sisi:</label>
+        <input type="number" id="sisi" placeholder="Panjang sisi" />
+    </div>
+
+    <br>
+
+    <button onclick="hitung()">Hitung</button>
+
+    <p id="hasilLuas"></p>
+    <p id="hasilKeliling"></p>
+    <p id="caraPerhitungan"></p>
+
+    <script src="./js/sript.js"></script>
+</body>
+</html>
